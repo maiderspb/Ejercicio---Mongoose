@@ -127,6 +127,7 @@ En package.json:
 "start": "node index.js",
 "dev": "nodemon index.js"
 }
+
 Ejecutar con:
 
 npm run dev
