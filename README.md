@@ -1,4 +1,6 @@
-# API de Gestión de Productos - MongoDB + Node.js + Express
+![banner](./assets/thebridge.png)
+
+# API RESTful para gestionar productos - MongoDB + Node.js + Express
 
 ## 🧾 Introducción
 
@@ -26,11 +28,12 @@ Este proyecto consiste en una API RESTful desarrollada con **Node.js**, **Expres
 3. Obtener la cadena de conexión y configurarla en un archivo `keys.js`:
 
 // keys.js
+
 module.exports = {
 MONGO_URI: "mongodb+srv://<usuario>:<contraseña>@<cluster>.mongodb.net/api_summer_products?retryWrites=true&w=majority"
 };
 
-Establecer la conexión en config/config.js:
+### Establecer la conexión en config/config.js:
 
 const mongoose = require("mongoose");
 const { MONGO_URI } = require("./keys");
@@ -50,9 +53,10 @@ throw new Error("Error al conectar a la base de datos");
 
 module.exports = { dbConnection };
 
-🔁 2. Endpoints de la API
+## 🔁 2. Endpoints de la API
 
-Crear un producto (POST)
+### Crear un producto (POST)
+
 URL: /api/products
 Método: POST
 Body:
@@ -62,46 +66,59 @@ Body:
 "price": 25
 }
 
-Obtener todos los productos (GET)
+### Obtener todos los productos (GET)
+
 URL: /api/products
 Método: GET
 
-Obtener un producto por ID (GET)
+### Obtener un producto por ID (GET)
+
 URL: /api/products/:id
 Método: GET
 
-Buscar productos por nombre (GET)
+### Buscar productos por nombre (GET)
+
 URL: /api/products/search/:name
 Método: GET
 
-Actualizar un producto (PUT)
+### Actualizar un producto (PUT)
+
 URL: /api/products/:id
 Método: PUT
 Body: (ejemplo)
 {
 "price": 30
 }
-Eliminar un producto (DELETE)
+
+### Eliminar un producto (DELETE)
+
 URL: /api/products/:id
 Método: DELETE
 
 📂 Estructura del Proyecto
 
 📁 config
+
 └── config.js
+
 └── keys.js
 
 📁 controllers
+
 └── productController.js
 
 📁 models
+
 └── product.js
 
 📁 routes
+
 └── productRoutes.js
 
 📄 index.js
+
 📄 package.json
+
 📄 README.md
 
 En package.json:
@@ -111,9 +128,10 @@ En package.json:
 "dev": "nodemon index.js"
 }
 Ejecutar con:
+
 npm run dev
 
-🧪 Pruebas con Postman
+## 🧪 Pruebas con Postman
 
 - Usar Postman para probar los endpoints descritos.
 
@@ -121,6 +139,6 @@ npm run dev
 
 - Verificar que los productos aparezcan también en MongoDB Atlas.
 
-🧠 Conclusión
+## 🧠 Conclusión
 
 El presente proyecto ofrece una introducción práctica al uso de bases de datos no relacionales con MongoDB Atlas y la construcción de una API RESTful con Node.js, permitiendo comprender los fundamentos del diseño y manejo de colecciones, así como la interacción con datos usando herramientas modernas.
