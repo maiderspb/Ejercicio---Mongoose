@@ -140,6 +140,6 @@ npm run dev
 
 - Verificar que los productos aparezcan también en MongoDB Atlas.
 
-## 🧠 Conclusión
+## 🧠 Resumen ejecutivo
 
 El presente proyecto ofrece una introducción práctica al uso de bases de datos no relacionales con MongoDB Atlas y la construcción de una API RESTful con Node.js, permitiendo comprender los fundamentos del diseño y manejo de colecciones, así como la interacción con datos usando herramientas modernas.
